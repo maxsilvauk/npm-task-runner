@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="paxportal">
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
+    <link href="app.less" type="text/css" rel="stylesheet/less">
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+    <!-- JS from Bower Components -->
+    <script src="bower_components/less.js/dist/less.js" data-concat="false"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- Main App JS -->
+    <script src="app.js"></script>
+    <script src="components/shared/shared.js"></script>
+    <script src="components/dashboard/dashboard.js"></script>
+    <script src="components/reporting/reporting.js"></script>
+    <script src="components/reporting/bookings/bookings.js"></script>
+    <script src="components/reporting/supplier-status/supplier-status.js"></script>
+    <script src="components/suppliers/suppliers.js"></script>
+    <script src="components/jira/jira.js"></script>
+  </head>
+  <body>
+    <div class="site-container no-gutter">
+        <div ng-include="'components/shared/partials/nav.html'"></div>
+        <div id="right">
+            <div ng-include="'components/shared/partials/header.html'"></div>
+            <div id="content" ng-view></div>
+        </div>
+        <div ng-include="'components/shared/partials/footer.html'"></div>
+    </div>
+  </body>
+</html>

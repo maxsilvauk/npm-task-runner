@@ -1,0 +1,35 @@
+{
+  "name": "taskrunner",
+  "version": "1.0.0",
+  "description": "this is a test package",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "lint": "jshint *.js test/*.js",
+    "test": "mocha dev/js/app.js -u bdd -R spec",
+    "posttest": "echo 'the test has been run!'",
+    "build:less": "lessc dev/less/style.less public/assets/css/style.css",
+    "build:js": "browserify ./dev/js/build/app.js > ./public/assets/js/bundle.js",
+    "build:clean": "rimraf public/assets/css/*, public/assets/js/*",
+    "prebuild": "npm run build:clean",
+    "build": "npm run build:less && npm run build:js",
+    "postbuild": "npm run watch",
+    "watch": "watchify ./dev/js/*.js -o ./public/assets/js/bundle.js -v"
+  },
+  "author": "Max Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "jshint": "^2.9.4",
+    "less": "^2.7.1",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4",
+    "should": "^11.1.1",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.7",
+    "express": "^4.14.0"
+  }
+}

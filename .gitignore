@@ -1,0 +1,18 @@
+target
+<<<<<<< HEAD
+=======
+.DS_Store
+.AppleDouble
+.LSOverride
+.sass-cache
+._*
+Thumbs.db
+*.log
+*.css.map
+node_modules/
+bower_components/
+bower.json
+.bowerrc
+.npmignore
+.jshintrc
+.editorconfig
