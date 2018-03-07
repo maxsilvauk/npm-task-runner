@@ -1,5 +1,5 @@
 {
-  "name": "taskrunner",
+  "name": "NPM taskrunner",
   "version": "1.0.0",
   "description": "this is a test package",
   "main": "index.js",
